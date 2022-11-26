@@ -8,20 +8,16 @@
 #include "producto.h"
 
 
-using namespace std;
-Producto pro;
 Inventario::Inventario()
 {
     ifstream archivo;
-    archivo.open("inventario.txt");
+    archivo.open("inventario.csv");
     string linea;
     while (getline(archivo, linea))
     {
         stringstream token(linea);
-        string ID;
-        string name;
-        string precio;
-        string stock;
+        string ID,name,precio,stock;
+
         getline(token,ID,',');
    
         getline(token,name,',');
@@ -31,14 +27,15 @@ Inventario::Inventario()
         getline(token,stock,',');
      
 
-        pro.set_producto(ID,name,stock,precio);
-        Inventario::productos_inv.push_back(pro);
-    }
-string Inventario::to_string(productos_inv)
-{
-    for(int i = 0;i<productos_inv.size();i++)
-    {
-        cout<<productos_inv[i]<<endl;
+        Producto p1(ID,name,stock,precio);
+        productos_inv.push_back(p1);
     }
 }
+void Inventario::to_string()
+{
+    int a = productos_inv.size();
+    for(int i = 0;i<a;i++)
+    {
+        productos_inv[i].get_producto("");
+    }
 }

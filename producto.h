@@ -1,6 +1,7 @@
 #ifndef PRODUCTO_H
 #define PRODUCTO_H
 #include <string>
+
 using namespace std;
 
 class Producto
@@ -15,9 +16,8 @@ private:
 
 public:
 
-    Producto();
-    string get_producto();
-    void set_producto(string,string,string,string);
+    Producto(string,string,string,string);
+    void get_producto(string);
 
 };
 #endif

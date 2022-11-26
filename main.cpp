@@ -10,7 +10,7 @@ int main()
 {
 
 Inventario inv;
-inv.to_string(inv.productos_inv);
+inv.to_string();
 
 
 

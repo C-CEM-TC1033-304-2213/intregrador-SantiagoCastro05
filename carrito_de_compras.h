@@ -1,6 +1,5 @@
 #ifndef CARRITO_DE_COMPRAS_H
 #define CARRITO_DE_COMPRAS_H
-#include <string>
 #include <vector>
 #include "producto.h"
 using namespace std;

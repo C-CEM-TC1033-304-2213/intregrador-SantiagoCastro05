@@ -4,5 +4,5 @@
         "string_view": "cpp",
         "stacktrace": "cpp"
     },
-    "C_Cpp.errorSquiggles": "Disabled"
+    "C_Cpp.errorSquiggles": "Enabled"
 }
