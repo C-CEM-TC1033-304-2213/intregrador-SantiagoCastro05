@@ -17,7 +17,7 @@ public:
 
     Carrito();
     void ver_carrito();
-    void agregar_producto(Producto pro);
+    void agregar_producto(Producto pro, Inventario inv,int num);
     string producto_compra(int product);
     int num_producto_compra(int num_product);
 

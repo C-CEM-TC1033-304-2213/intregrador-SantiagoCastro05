@@ -1,5 +1,4 @@
 #include <iostream>
-#include <vector>
 #include<sstream>
 
 #include "inventario.h"
@@ -8,12 +7,12 @@
 using namespace std;
 
 Producto::Producto(string id,string nom,string cant,string pre)
-    {
-        precio = pre;
-        cantidad = cant;
-        ID = id;
-        nombre = nom;
-    }
+{
+    precio = pre;
+    cantidad = cant;
+    ID = id;
+    nombre = nom;
+}
 void Producto::get_producto(string x)
 {
     if(x=="ID")

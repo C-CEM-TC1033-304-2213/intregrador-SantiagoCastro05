@@ -1,7 +1,6 @@
 #include <iostream>
 #include <sstream>
 #include <fstream>
-#include <vector>
 #include <string>
 
 #include "inventario.h"
@@ -33,9 +32,10 @@ Inventario::Inventario()
 }
 void Inventario::to_string()
 {
-    int a = productos_inv.size();
-    for(int i = 0;i<a;i++)
+    //int a = productos_inv.size();
+    productos_inv[0].get_producto("");
+    /*for(int i = 0;i<a;i++)
     {
         productos_inv[i].get_producto("");
-    }
+    }*/
 }
