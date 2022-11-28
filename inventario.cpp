@@ -79,7 +79,4 @@ void Inventario::disminuir_producto(int producto_solicitado, int cantidad_solici
     productos_inv[producto_solicitado] = nuevo;
 
 }
-void Inventario::re_escribir_csv()
-{
-    
-}
+
