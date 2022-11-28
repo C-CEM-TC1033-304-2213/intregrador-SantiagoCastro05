@@ -13,27 +13,31 @@ Producto::Producto(string id,string nom,string cant,string pre)
     ID = id;
     nombre = nom;
 }
-void Producto::get_producto(string x)
+string Producto::get_producto(string x)
 {
     if(x=="ID")
     {
-        cout<<ID<<endl;
+        return ID;
     }
     else if (x=="nombre")
     {
-        cout<<nombre<<endl;
+        return nombre;
     }
     else if (x=="precio")
     {
-        cout<<precio<<endl;
+        return precio;
     }
     else if (x=="cantidad")
     {
-        cout<<cantidad<<endl;
+        return cantidad;
     }
     else
     {
-        cout<<ID<<" "<<nombre<<" "<<precio<<" "<<cantidad<<endl;
+        return 0;
     }
+}
+void Producto::get_todo_producto()
+{
+    cout<<ID<<" "<<nombre<<" "<<cantidad<<" "<<precio<<endl;
 }
 

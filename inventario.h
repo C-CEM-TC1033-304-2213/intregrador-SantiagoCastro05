@@ -8,13 +8,15 @@ class Inventario
 {
 
 private:
-    
+   vector<Producto>productos_inv;
 public:
-    vector<Producto>productos_inv;
+    
     Inventario();
     void to_string();
-    bool existencia_producto(int producto);
-    int disminuir_producto(int num_producto);
+    Producto get_vector(int);
+    int existencia_producto(int,int);
+    void disminuir_producto(int,int);
+    void re_escribir_csv();
 
 };
 #endif  

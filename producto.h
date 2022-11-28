@@ -17,7 +17,8 @@ private:
 public:
 
     Producto(string,string,string,string);
-    void get_producto(string);
+    string get_producto(string);
+    void get_todo_producto();
 
 };
 #endif

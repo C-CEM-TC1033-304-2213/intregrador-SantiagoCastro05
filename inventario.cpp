@@ -6,6 +6,14 @@
 #include "inventario.h"
 #include "producto.h"
 
+std::string enteroACadena(int entero)
+    {
+        std::string numeroComoCadena = "";
+        std::stringstream ss;
+        ss << entero;
+        ss >> numeroComoCadena;
+        return numeroComoCadena;
+    }
 
 Inventario::Inventario()
 {
@@ -32,10 +40,46 @@ Inventario::Inventario()
 }
 void Inventario::to_string()
 {
-    //int a = productos_inv.size();
-    productos_inv[0].get_producto("");
-    /*for(int i = 0;i<a;i++)
+    int a = productos_inv.size();
+    for(int i = 0;i<a;i++)
     {
-        productos_inv[i].get_producto("");
-    }*/
+        productos_inv[i].get_todo_producto();
+    }
+}
+
+Producto Inventario::get_vector(int xd)
+{
+    return productos_inv[xd];
+}
+int Inventario::existencia_producto(int producto_solicitado, int cantidad_solicitada)
+{
+    int producto_existente = stoi(productos_inv[producto_solicitado].get_producto("cantidad"));
+
+    if (producto_existente < cantidad_solicitada)
+    {
+        return 0;
+    }
+    else
+    {
+        return 1;
+    }
+}
+void Inventario::disminuir_producto(int producto_solicitado, int cantidad_solicitada)
+{
+    int producto_existente = stoi(productos_inv[producto_solicitado].get_producto("cantidad"));
+
+    int nuevo_producto_existente = producto_existente - cantidad_solicitada;
+
+    
+
+    Producto p1 = productos_inv[producto_solicitado];
+
+    Producto nuevo (p1.get_producto("ID"),p1.get_producto("nombre"),(enteroACadena(nuevo_producto_existente)),p1.get_producto("precio"));
+    
+    productos_inv[producto_solicitado] = nuevo;
+
+}
+void Inventario::re_escribir_csv()
+{
+    
 }
