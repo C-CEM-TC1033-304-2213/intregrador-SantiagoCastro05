@@ -16,7 +16,6 @@ public:
     Producto get_vector(int);
     int existencia_producto(int,int);
     void disminuir_producto(int,int);
-    void re_escribir_csv();
 
 };
 #endif  
