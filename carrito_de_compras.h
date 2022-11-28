@@ -10,9 +10,6 @@ class Carrito
 private:
     vector<Producto>product_carro;
     vector<int>bought_items;
-    string producto;
-    int num_productos;
-    double coste_total;
 
 public:
 
