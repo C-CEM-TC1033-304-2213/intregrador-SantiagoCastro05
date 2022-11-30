@@ -3,14 +3,18 @@
 #include"inventario.h"
 #include "producto.h"
 #include "carrito_de_compras.h"
+#include "tienda.h"
 
 using namespace std;
 
 int main()
 {
-Carrito Car;
-Inventario inv;
+ Tienda tien;
+tien.generar_inv();
+tien.inicio_tienda();
 
+/* Inventario inv;
+Carrito Car;
 //-------------------------------------------------------------------------------------------------
 cout<<"Ingresa numero asignado para el producto que deseas :D"<<endl;
 int producto_desado;
@@ -46,7 +50,7 @@ inv.to_string();
 
 //-------------------------------------------------------------------------------------------------
 
-//Car.ver_carrito();
+Car.ver_carrito();
 
-
+ */
 }

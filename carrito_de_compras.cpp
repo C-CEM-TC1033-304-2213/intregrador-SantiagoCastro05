@@ -9,15 +9,17 @@ using namespace std;
 Carrito::Carrito()
 {
     vector<Producto>product_carro;
-    vector<int>bought_items;
+    vector<float>bought_items;
 }
 
 void Carrito::ver_carrito()
 {
+    cout<<"///////////////////////////////////////////////////////////////////////////////////////////"<<endl;
+    cout<<"Tu carrito de compras tiene lo siguientes prodructos con su respectiva cantidad deseada"<<"\n"<<endl;
     int a = product_carro.size();
     for(int i = 0;i<a;i++)
     {
-        product_carro[i].get_todo_producto();
+        cout<<product_carro[i].get_producto("nombre")<<"-----"<<bought_items[i]<<endl;
     }
 }
 void Carrito::num_producto_comprados(int num_product)
@@ -28,11 +30,17 @@ void Carrito::agregar_producto(Producto p)
 {
     product_carro.push_back(p);
 }
-float Carrito::calcular_total()
+void Carrito::calcular_total()
 {
-    float total;
-    for (int i;i<=product_carro.size();i++)
+    float total = 0;
+    int pato = product_carro.size();
+    for (int e = 0;e<pato;e++)
     {
-        total = (bought_items[i]*stof(product_carro[i].get_producto("precio")));
+        float pro = stof(product_carro[e].get_producto("precio"));
+        total = total + (bought_items[e]*pro);
     }
+    cout<<"El valor de su compra es de: "<<total<<"\n"<<"Garcias por su Compra :D"<<endl;
 }
+//
+//
+//puto

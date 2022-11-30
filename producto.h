@@ -19,6 +19,7 @@ public:
     Producto(string,string,string,string);
     string get_producto(string);
     void get_todo_producto();
+    void get_menu();
 
 };
 #endif

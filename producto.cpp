@@ -38,6 +38,9 @@ string Producto::get_producto(string x)
 }
 void Producto::get_todo_producto()
 {
-    cout<<ID<<" "<<nombre<<" "<<cantidad<<" "<<precio<<endl;
+    cout<<ID<<" "<<nombre<<" "<<precio<<" "<<cantidad<<endl;
 }
-
+void Producto::get_menu()
+{
+    cout<<nombre<<" "<<"$"<<precio<<endl;
+}

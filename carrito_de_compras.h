@@ -9,7 +9,7 @@ class Carrito
 
 private:
     vector<Producto>product_carro;
-    vector<int>bought_items;
+    vector<float>bought_items;
 
 public:
 
@@ -17,7 +17,7 @@ public:
     void ver_carrito();
     void agregar_producto(Producto p);
     void num_producto_comprados(int num_product);
-    float calcular_total();
+    void calcular_total();
 };
 
 #endif

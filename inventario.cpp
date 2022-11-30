@@ -38,18 +38,36 @@ Inventario::Inventario()
         productos_inv.push_back(p1);
     }
 }
+void Inventario::generar_inv()
+{
+
+}
+
+void Inventario::to_string_menu()
+{
+    int a = productos_inv.size();
+    for(int i = 0;i<a;i++)
+    {
+        cout<<i<<") ";productos_inv[i].get_menu();
+    }
+}
+
 void Inventario::to_string()
 {
     int a = productos_inv.size();
     for(int i = 0;i<a;i++)
     {
-        productos_inv[i].get_todo_producto();
+        cout<<productos_inv[i].get_producto("cantidad");
     }
 }
 
 Producto Inventario::get_vector(int xd)
 {
     return productos_inv[xd];
+}
+int Inventario::tamaño_vector()
+{
+    return productos_inv.size();
 }
 int Inventario::existencia_producto(int producto_solicitado, int cantidad_solicitada)
 {
