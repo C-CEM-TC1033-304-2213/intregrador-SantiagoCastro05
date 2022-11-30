@@ -1,5 +1,4 @@
 #include <iostream>
-#include "producto.h"
 #include "inventario.h"
 #include "carrito_de_compras.h"
 

@@ -2,7 +2,7 @@
 #include "tienda.h"
 int main()
 {
- Tienda tien;
+Tienda tien;
 tien.generar_inv();
 tien.inicio_tienda();
 

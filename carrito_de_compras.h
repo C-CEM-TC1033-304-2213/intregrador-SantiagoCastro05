@@ -15,7 +15,7 @@ public:
 
     Carrito();
     void ver_carrito();
-    void agregar_producto(Producto p);
+    void agregar_producto(Producto);
     void num_producto_comprados(int num_product);
     void calcular_total();
 };

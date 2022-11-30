@@ -61,9 +61,9 @@ void Inventario::to_string()
     }
 }
 
-Producto Inventario::get_vector(int xd)
+Producto Inventario::get_vector(int num)
 {
-    return productos_inv[xd];
+    return productos_inv[num];
 }
 int Inventario::tamaño_vector()
 {

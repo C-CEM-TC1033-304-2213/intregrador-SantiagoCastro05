@@ -14,7 +14,5 @@ public:
     void inicio_tienda();
     void generar_inv();
     void llamada_carrito();
-    int opcion_menu_principal(int opcion);
-    void terminar();
 };
 #endif

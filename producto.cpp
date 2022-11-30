@@ -1,7 +1,6 @@
 #include <iostream>
 #include<sstream>
 
-#include "inventario.h"
 #include "producto.h"
 
 using namespace std;
@@ -13,27 +12,27 @@ Producto::Producto(string id,string nom,string cant,string pre)
     ID = id;
     nombre = nom;
 }
-string Producto::get_producto(string x)
+string Producto::get_producto(string select)
 {
-    if(x=="ID")
+    if(select=="ID")
     {
         return ID;
     }
-    else if (x=="nombre")
+    else if (select=="nombre")
     {
         return nombre;
     }
-    else if (x=="precio")
+    else if (select=="precio")
     {
         return precio;
     }
-    else if (x=="cantidad")
+    else if (select=="cantidad")
     {
         return cantidad;
     }
     else
     {
-        return 0;
+        return "?";
     }
 }
 void Producto::get_todo_producto()
