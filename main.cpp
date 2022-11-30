@@ -1,12 +1,5 @@
 #include <iostream>
-
-#include"inventario.h"
-#include "producto.h"
-#include "carrito_de_compras.h"
 #include "tienda.h"
-
-using namespace std;
-
 int main()
 {
  Tienda tien;
