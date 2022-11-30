@@ -1,5 +1,6 @@
 #include "tienda.h"
 #include <iostream>
+#include <stdlib.h>
 using namespace std;
 
 Inventario inv;
@@ -39,11 +40,13 @@ while (num == 0)
         if (opcion == 3)
         {
             car.calcular_total();
+            abort();
             break;
         }
         if (opcion == 4)
         {
             cout<<"Gracias, no vuelva a pronto (bromita) :D"<<endl;
+            abort();
             break;
         }
         else
@@ -57,13 +60,13 @@ void Tienda::llamada_carrito()
 {
     cout<<"//////////////////// Menu de Compras ////////////////////"<<"\n"<<endl;
     inv.to_string_menu();
-    cout<<"Ingresa el numero del producto correspondiente para seleccionarlo"<<endl;
+    cout<<"Ingresa el numero del producto correspondiente para seleccionarlo (-1 para cancelar)"<<endl;
     int producto_desado;
     cin>>producto_desado;
     cout<<"//////////////////// ---------------- ////////////////////"<<"\n"<<endl;
     while (producto_desado > (inv.tamaño_vector()-1))
     {
-        cout<<"Ingrese un producto que realmente pertenezca al inventario"<<endl;
+        cout<<"Ingrese un producto que realmente pertenezca al inventario (-1 para cancelar)"<<endl;
         cin>>producto_desado;
     }
     if (producto_desado == -1)
@@ -72,7 +75,7 @@ void Tienda::llamada_carrito()
     }
 
 //-------------------------------------------------------------------------------------------
-    cout<<"Ingresa la cantidad que deaseas del producto"<<endl;
+    cout<<"Ingresa la cantidad que deaseas del producto (-1 para cancelar)"<<endl;
     float cantidad_deseada;
     cin>>cantidad_deseada;
 
