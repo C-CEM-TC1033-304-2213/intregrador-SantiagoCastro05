@@ -40,6 +40,3 @@ void Carrito::calcular_total()
     }
     cout<<"El valor de su compra es de: "<<total<<"\n"<<"Garcias por su Compra :D"<<endl;
 }
-//
-//
-//puto
