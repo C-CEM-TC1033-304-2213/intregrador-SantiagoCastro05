@@ -5,10 +5,7 @@ using namespace std;
 
 Inventario inv;
 Carrito car;
-void Tienda::generar_inv()
-{
-    inv.generar_inv();
-}
+
 void Tienda::inicio_tienda()
 {
     

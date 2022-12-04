@@ -3,7 +3,6 @@
 int main()
 {
 Tienda tien;
-tien.generar_inv();
 tien.inicio_tienda();
 
 /* Inventario inv;
