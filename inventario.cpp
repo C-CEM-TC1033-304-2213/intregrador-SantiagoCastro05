@@ -38,11 +38,6 @@ Inventario::Inventario()
         productos_inv.push_back(p1);
     }
 }
-void Inventario::generar_inv()
-{
-
-}
-
 void Inventario::to_string_menu()
 {
     int a = productos_inv.size();
